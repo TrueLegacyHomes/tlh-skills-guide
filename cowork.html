@@ -287,7 +287,7 @@
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
-            3 Simple Steps
+            5 Simple Steps
         </div>
         <h1>TLH Skills for Claude Cowork</h1>
         <p class="subtitle">Add all 14 True Legacy Homes AI skills to Claude Cowork.</p>
@@ -299,6 +299,29 @@
         <div class="step">
             <div class="step-header">
                 <div class="step-number">1</div>
+                <h2>Get GitHub Access</h2>
+            </div>
+            <p>You need access to the TLH GitHub. Ask Tran to invite you to the <strong>TrueLegacyHomes</strong> organization.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-header">
+                <div class="step-number">2</div>
+                <h2>Create a GitHub Token</h2>
+            </div>
+            <p style="margin-bottom: 16px;">Go to <a href="https://github.com/settings/tokens/new">github.com/settings/tokens/new</a> and create a token:</p>
+            <ul style="margin-bottom: 20px;">
+                <li>Note (name): <strong>Claude Cowork</strong></li>
+                <li>Expiration: <strong>90 days</strong> (or longer)</li>
+                <li>Scope: Check the box for <strong>repo</strong> (Full control of private repositories)</li>
+                <li>Click <strong>Generate token</strong></li>
+                <li><strong>Copy the token</strong> — you'll need it in the next step!</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <div class="step-header">
+                <div class="step-number">3</div>
                 <h2>Open Claude Cowork</h2>
             </div>
             <p>Go to <a href="https://cowork.anthropic.com">cowork.anthropic.com</a> and sign in with your TLH account.</p>
@@ -306,7 +329,7 @@
 
         <div class="step">
             <div class="step-header">
-                <div class="step-number">2</div>
+                <div class="step-number">4</div>
                 <h2>Add the TLH Marketplace</h2>
             </div>
             <p style="margin-bottom: 16px;">In the chat, type this command and press Enter:</p>
@@ -314,6 +337,7 @@
                 <code>/plugin marketplace add TrueLegacyHomes/tlh-cowork-plugins</code>
                 <button class="copy-btn" onclick="copyCommand()">Copy</button>
             </div>
+            <p style="margin-top: 16px;">When prompted, paste your GitHub token from Step 2.</p>
             <div class="info-box">
                 <p>✅ This adds <strong>all 14 TLH skills</strong> to your Cowork at once!</p>
             </div>
@@ -321,7 +345,7 @@
         
         <div class="step">
             <div class="step-header">
-                <div class="step-number">3</div>
+                <div class="step-number">5</div>
                 <h2>Pick a Skill & Start Working</h2>
             </div>
             <p>Click the skill picker, select any TLH skill, and start chatting. That's it!</p>
