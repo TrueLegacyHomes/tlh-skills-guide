@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TLH Skills for Claude Code</title>
+    <title>TLH Skills for Claude Cowork</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -57,6 +57,19 @@
             color: #64748b;
             max-width: 500px;
             margin: 0 auto;
+        }
+        
+        /* Nav */
+        .nav-link {
+            display: inline-block;
+            margin-top: 24px;
+            color: #38b5ad;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
         }
         
         /* Main */
@@ -274,11 +287,11 @@
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
-            6 Simple Steps
+            3 Simple Steps
         </div>
-        <h1>TLH Skills for Claude Code</h1>
-        <p class="subtitle">Add all 14 True Legacy Homes AI skills to your Claude Code.</p>
-        <a href="cowork.html" class="nav-link" style="display:inline-block; margin-top:24px; color:#38b5ad; text-decoration:none; font-weight:500;">Using Claude Cowork instead? Click here →</a>
+        <h1>TLH Skills for Claude Cowork</h1>
+        <p class="subtitle">Add all 14 True Legacy Homes AI skills to Claude Cowork.</p>
+        <a href="index.html" class="nav-link">← Using Claude Code instead? Click here</a>
     </header>
 
     <main class="main">
@@ -286,83 +299,32 @@
         <div class="step">
             <div class="step-header">
                 <div class="step-number">1</div>
-                <h2>Get GitHub Access</h2>
+                <h2>Open Claude Cowork</h2>
             </div>
-            <p>You need access to the TLH GitHub. Ask Tran to invite you to the <strong>TrueLegacyHomes</strong> organization.</p>
+            <p>Go to <a href="https://cowork.anthropic.com">cowork.anthropic.com</a> and sign in with your TLH account.</p>
         </div>
 
         <div class="step">
             <div class="step-header">
                 <div class="step-number">2</div>
-                <h2>Create a GitHub Token</h2>
+                <h2>Add the TLH Marketplace</h2>
             </div>
-            <p style="margin-bottom: 16px;">Go to <a href="https://github.com/settings/tokens/new">github.com/settings/tokens/new</a> and create a token:</p>
-            <ul style="margin-bottom: 20px;">
-                <li>Note (name): <strong>Claude Code</strong></li>
-                <li>Expiration: <strong>90 days</strong> (or longer)</li>
-                <li>Scope: Check the box for <strong>repo</strong> (Full control of private repositories)</li>
-                <li>Click <strong>Generate token</strong></li>
-                <li><strong>Copy the token immediately</strong> — you won't see it again!</li>
-            </ul>
-        </div>
-
-        <div class="step">
-            <div class="step-header">
-                <div class="step-number">3</div>
-                <h2>Open Terminal & Add Your Token</h2>
-            </div>
-            <p style="margin-bottom: 8px;"><strong>Open Terminal:</strong></p>
-            <ul style="margin-bottom: 20px;">
-                <li><strong>Mac:</strong> Press <strong>Cmd + Space</strong>, type <strong>Terminal</strong>, press Enter</li>
-                <li><strong>Windows:</strong> Press <strong>Windows key</strong>, type <strong>PowerShell</strong>, press Enter</li>
-            </ul>
-            
-            <p style="margin-bottom: 8px;">Paste this command (replace <code style="background:#f1f5f9; padding:2px 6px; border-radius:4px;">paste_your_token_here</code> with your actual token):</p>
-            <div class="command-box">
-                <code>echo 'export GITHUB_TOKEN="paste_your_token_here"' >> ~/.zshrc</code>
-                <button class="copy-btn" onclick="copyToken()">Copy</button>
-            </div>
-            
-            <p style="margin-top: 16px; margin-bottom: 8px;">Then run this to apply the change:</p>
-            <div class="command-box">
-                <code>source ~/.zshrc</code>
-                <button class="copy-btn" onclick="copySource()">Copy</button>
-            </div>
-            
-            <div class="info-box">
-                <p>💡 <strong>Windows users:</strong> Use <code>$env:GITHUB_TOKEN="your_token"</code> in PowerShell, or set it in System Environment Variables.</p>
-            </div>
-        </div>
-        
-        <div class="step">
-            <div class="step-header">
-                <div class="step-number">4</div>
-                <h2>Open Claude Code</h2>
-            </div>
-            <p>Launch Claude Code on your computer. If you don't have it yet, download it from <a href="https://claude.ai/code">claude.ai/code</a></p>
-        </div>
-
-        <div class="step">
-            <div class="step-header">
-                <div class="step-number">5</div>
-                <h2>Add the TLH Skills</h2>
-            </div>
-            <p>In Claude Code, type this command and press Enter:</p>
+            <p style="margin-bottom: 16px;">In the chat, type this command and press Enter:</p>
             <div class="command-box">
                 <code>/plugin marketplace add TrueLegacyHomes/tlh-cowork-plugins</code>
                 <button class="copy-btn" onclick="copyCommand()">Copy</button>
             </div>
             <div class="info-box">
-                <p>✅ This adds <strong>all 14 TLH skills</strong> to your Claude Code at once!</p>
+                <p>✅ This adds <strong>all 14 TLH skills</strong> to your Cowork at once!</p>
             </div>
         </div>
-
+        
         <div class="step">
             <div class="step-header">
-                <div class="step-number">6</div>
+                <div class="step-number">3</div>
                 <h2>Pick a Skill & Start Working</h2>
             </div>
-            <p>Click the skill picker at the top of Claude Code, select any TLH skill, and start chatting. That's it!</p>
+            <p>Click the skill picker, select any TLH skill, and start chatting. That's it!</p>
         </div>
 
         <div class="divider"></div>
@@ -443,18 +405,6 @@
     <script>
         function copyCommand() {
             navigator.clipboard.writeText('/plugin marketplace add TrueLegacyHomes/tlh-cowork-plugins');
-            event.target.textContent = 'Copied!';
-            setTimeout(() => event.target.textContent = 'Copy', 2000);
-        }
-        
-        function copyToken() {
-            navigator.clipboard.writeText('echo \'export GITHUB_TOKEN="paste_your_token_here"\' >> ~/.zshrc');
-            event.target.textContent = 'Copied!';
-            setTimeout(() => event.target.textContent = 'Copy', 2000);
-        }
-        
-        function copySource() {
-            navigator.clipboard.writeText('source ~/.zshrc');
             event.target.textContent = 'Copied!';
             setTimeout(() => event.target.textContent = 'Copy', 2000);
         }
