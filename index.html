@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLH Skills for Claude Code</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwindcss.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tlh-teal': '#38b5ad',
+                        'tlh-teal-dark': '#2d9e96',
+                        'tlh-dark': '#1e293b',
+                        'tlh-warm': '#fef3e2',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .copy-btn:hover { transform: scale(1.05); }
+        .copy-btn:active { transform: scale(0.95); }
+    </style>
+</head>
+<body class="bg-white text-tlh-dark">
+    
+    <!-- Header -->
+    <header class="bg-tlh-warm py-12 md:py-20">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-tlh-teal/10 text-tlh-teal font-medium px-4 py-2 rounded-full mb-6">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                Get Started in 2 Minutes
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">TLH Skills for Claude Code</h1>
+            <p class="text-xl text-gray-600">Add True Legacy Homes AI skills to your Claude Code in three simple steps.</p>
+        </div>
+    </header>
+
+    <!-- Steps -->
+    <main class="max-w-3xl mx-auto px-6 py-16">
+        
+        <!-- Step 1 -->
+        <div class="mb-12">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-10 h-10 bg-tlh-teal text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                <h2 class="text-2xl font-semibold">Open Claude Code</h2>
+            </div>
+            <p class="text-gray-600 ml-14">Launch Claude Code on your computer. If you don't have it yet, download it from <a href="https://claude.ai/code" class="text-tlh-teal hover:underline">claude.ai/code</a></p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="mb-12">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-10 h-10 bg-tlh-teal text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                <h2 class="text-2xl font-semibold">Add the TLH Marketplace</h2>
+            </div>
+            <p class="text-gray-600 ml-14 mb-4">In Claude Code, type this command and press Enter:</p>
+            <div class="ml-14 bg-tlh-dark rounded-lg p-4 flex items-center justify-between">
+                <code class="text-tlh-teal font-mono">/plugin marketplace add TrueLegacyHomes/tlh-cowork-plugins</code>
+                <button onclick="copyCommand()" class="copy-btn bg-tlh-teal text-white px-4 py-2 rounded-lg text-sm font-medium transition-transform">
+                    Copy
+                </button>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-10 h-10 bg-tlh-teal text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                <h2 class="text-2xl font-semibold">Pick a Skill & Start Working</h2>
+            </div>
+            <p class="text-gray-600 ml-14">Click the skill picker at the top of Claude Code, select a TLH skill, and start chatting. That's it!</p>
+        </div>
+
+        <!-- Divider -->
+        <hr class="border-gray-200 mb-16">
+
+        <!-- Skills List -->
+        <div>
+            <h2 class="text-2xl font-bold mb-8 text-center">Available Skills</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">solution-finder</h3>
+                    <p class="text-gray-600 text-sm">Find answers across TLH knowledge</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">true-legacy-homes</h3>
+                    <p class="text-gray-600 text-sm">Core company knowledge & context</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">customer-support</h3>
+                    <p class="text-gray-600 text-sm">Draft responses, triage tickets</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">brand-design-system</h3>
+                    <p class="text-gray-600 text-sm">Colors, fonts, brand guidelines</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">data</h3>
+                    <p class="text-gray-600 text-sm">SQL queries, analysis, visualizations</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">reporting-dashboards</h3>
+                    <p class="text-gray-600 text-sm">Build reports and dashboards</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">process-playbook-builder</h3>
+                    <p class="text-gray-600 text-sm">Create SOPs and playbooks</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">automation-workflow-builder</h3>
+                    <p class="text-gray-600 text-sm">Design automation workflows</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">tlh-tech-stack</h3>
+                    <p class="text-gray-600 text-sm">Technology decisions & guidelines</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">tlh-systems-map</h3>
+                    <p class="text-gray-600 text-sm">Map of all 20 TLH systems</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">skill-creator</h3>
+                    <p class="text-gray-600 text-sm">Build new skills</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">agent-development</h3>
+                    <p class="text-gray-600 text-sm">AI agent patterns & guardrails</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">product-development</h3>
+                    <p class="text-gray-600 text-sm">Product workflows</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-tlh-teal transition-colors">
+                    <h3 class="font-semibold text-tlh-dark">true-legacy-homes-user-types</h3>
+                    <p class="text-gray-600 text-sm">Customer personas</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Help Section -->
+        <div class="mt-16 bg-tlh-warm rounded-xl p-8 text-center">
+            <h3 class="text-xl font-semibold mb-2">Need Help?</h3>
+            <p class="text-gray-600">Contact Paul at <a href="mailto:paul@truelegacyhomes.com" class="text-tlh-teal hover:underline">paul@truelegacyhomes.com</a></p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-tlh-dark text-white py-8">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2026 True Legacy Homes</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyCommand() {
+            navigator.clipboard.writeText('/plugin marketplace add TrueLegacyHomes/tlh-cowork-plugins');
+            const btn = document.querySelector('.copy-btn');
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy', 2000);
+        }
+    </script>
+</body>
+</html>
