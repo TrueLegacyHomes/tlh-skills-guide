@@ -277,7 +277,7 @@
             7 Simple Steps
         </div>
         <h1>TLH Skills for Claude Code</h1>
-        <p class="subtitle">Add all 14 True Legacy Homes AI skills to your Claude Code.</p>
+        <p class="subtitle">Add all 16 True Legacy Homes AI skills to your Claude Code.</p>
         <a href="cowork.html" class="nav-link" style="display:inline-block; margin-top:24px; color:#38b5ad; text-decoration:none; font-weight:500;">Using Claude Cowork instead? Click here →</a>
     </header>
 
@@ -367,11 +367,11 @@
             </div>
             <p>In Claude Code, type this command and press Enter:</p>
             <div class="command-box">
-                <code>/plugin marketplace add TrueLegacyHomes/tlh-cowork-plugins</code>
+                <code>/plugin marketplace add TrueLegacyHomes/Skills2.0</code>
                 <button class="copy-btn" onclick="copyCommand()">Copy</button>
             </div>
             <div class="info-box">
-                <p>✅ This adds <strong>all 14 TLH skills</strong> to your Claude Code at once!</p>
+                <p>✅ This adds <strong>all 16 TLH skills</strong> to your Claude Code at once!</p>
             </div>
         </div>
 
@@ -385,65 +385,80 @@
 
         <div class="divider"></div>
 
-        <h2 class="skills-title">All 14 Skills Included</h2>
+        <h2 class="skills-title">All 16 Skills Included</h2>
         <p class="skills-subtitle">You get all of these when you complete the steps above.</p>
         
+        <!-- 1.xx Foundation Skills -->
+        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; margin-bottom: 16px; margin-top: 24px;">1.xx Foundation</h3>
+        <div class="skills-grid" style="margin-bottom: 32px;">
+            <div class="skill-card">
+                <h3>skill-builder</h3>
+                <p>Creates all other skills</p>
+            </div>
+            <div class="skill-card">
+                <h3>quality-checker</h3>
+                <p>Validates skills and outputs</p>
+            </div>
+            <div class="skill-card">
+                <h3>memory-manager</h3>
+                <p>Context persistence across sessions</p>
+            </div>
+            <div class="skill-card">
+                <h3>engineering-handoff</h3>
+                <p>Translates specs for engineering</p>
+            </div>
+            <div class="skill-card">
+                <h3>company-profile</h3>
+                <p>TLH identity and business model</p>
+            </div>
+            <div class="skill-card">
+                <h3>people-and-roles</h3>
+                <p>Team roster and responsibilities</p>
+            </div>
+            <div class="skill-card">
+                <h3>brand-look-and-feel</h3>
+                <p>Visual identity guidelines</p>
+            </div>
+            <div class="skill-card">
+                <h3>brand-tone-and-language</h3>
+                <p>Voice and messaging style</p>
+            </div>
+            <div class="skill-card">
+                <h3>tools-and-platforms-map</h3>
+                <p>All tools and systems in use</p>
+            </div>
+        </div>
+
+        <!-- 2.xx Blueprint Skills -->
+        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; margin-bottom: 16px;">2.xx Blueprints</h3>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>solution-finder</h3>
-                <p>Find answers across TLH knowledge</p>
+                <h3>problem-definer</h3>
+                <p>Define and scope problems</p>
             </div>
             <div class="skill-card">
-                <h3>true-legacy-homes</h3>
-                <p>Core company knowledge & context</p>
+                <h3>sop-creator</h3>
+                <p>Create standard operating procedures</p>
             </div>
             <div class="skill-card">
-                <h3>customer-support</h3>
-                <p>Draft responses, triage tickets</p>
+                <h3>new-product-planner</h3>
+                <p>Plan new product development</p>
             </div>
             <div class="skill-card">
-                <h3>brand-design-system</h3>
-                <p>Colors, fonts, brand guidelines</p>
+                <h3>system-change-request</h3>
+                <p>Request system modifications</p>
             </div>
             <div class="skill-card">
-                <h3>data</h3>
-                <p>SQL queries, analysis, visualizations</p>
+                <h3>report-dashboard-planner</h3>
+                <p>Design reports and dashboards</p>
             </div>
             <div class="skill-card">
-                <h3>reporting-dashboards</h3>
-                <p>Build reports and dashboards</p>
+                <h3>automation-planner</h3>
+                <p>Plan automation workflows</p>
             </div>
             <div class="skill-card">
-                <h3>process-playbook-builder</h3>
-                <p>Create SOPs and playbooks</p>
-            </div>
-            <div class="skill-card">
-                <h3>automation-workflow-builder</h3>
-                <p>Design automation workflows</p>
-            </div>
-            <div class="skill-card">
-                <h3>tlh-tech-stack</h3>
-                <p>Technology decisions & guidelines</p>
-            </div>
-            <div class="skill-card">
-                <h3>tlh-systems-map</h3>
-                <p>Map of all 20 TLH systems</p>
-            </div>
-            <div class="skill-card">
-                <h3>skill-creator</h3>
-                <p>Build new skills</p>
-            </div>
-            <div class="skill-card">
-                <h3>agent-development</h3>
-                <p>AI agent patterns & guardrails</p>
-            </div>
-            <div class="skill-card">
-                <h3>product-development</h3>
-                <p>Product workflows</p>
-            </div>
-            <div class="skill-card">
-                <h3>true-legacy-homes-user-types</h3>
-                <p>Customer personas</p>
+                <h3>template-creator</h3>
+                <p>Create reusable templates</p>
             </div>
         </div>
 
@@ -460,7 +475,7 @@
 
     <script>
         function copyCommand() {
-            navigator.clipboard.writeText('/plugin marketplace add TrueLegacyHomes/tlh-cowork-plugins');
+            navigator.clipboard.writeText('/plugin marketplace add TrueLegacyHomes/Skills2.0');
             event.target.textContent = 'Copied!';
             setTimeout(() => event.target.textContent = 'Copy', 2000);
         }
