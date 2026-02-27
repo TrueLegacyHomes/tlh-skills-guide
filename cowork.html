@@ -186,6 +186,22 @@
             color: #0f766e;
             font-size: 14px;
         }
+
+        /* Warning box */
+        .warning-box {
+            background: #fef3c7;
+            border: 1px solid #fcd34d;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-left: 56px;
+            margin-top: 16px;
+        }
+        
+        .warning-box p {
+            margin-left: 0;
+            color: #92400e;
+            font-size: 14px;
+        }
         
         /* Divider */
         .divider {
@@ -229,6 +245,8 @@
             font-weight: 600;
             margin-bottom: 4px;
             color: #1e293b;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 14px;
         }
         
         .skill-card p {
@@ -278,6 +296,15 @@
             color: #94a3b8;
             font-size: 14px;
         }
+
+        .section-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #64748b;
+            margin-bottom: 16px;
+            margin-top: 24px;
+        }
     </style>
 </head>
 <body>
@@ -287,7 +314,7 @@
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
-            7 Simple Steps
+            Different Setup
         </div>
         <h1>TLH Skills for Claude Cowork</h1>
         <p class="subtitle">Add all 16 True Legacy Homes AI skills to Claude Cowork.</p>
@@ -295,6 +322,10 @@
     </header>
 
     <main class="main">
+
+        <div class="warning-box" style="margin-left: 0; margin-bottom: 32px;">
+            <p>⚠️ <strong>Cowork uses a different setup than Claude Code.</strong> Cowork doesn't support local slash commands — you'll need to reference skills differently. See instructions below.</p>
+        </div>
 
         <div class="step">
             <div class="step-header">
@@ -305,9 +336,8 @@
             <ul style="margin-bottom: 20px;">
                 <li>Go to <a href="https://github.com/signup">github.com/signup</a></li>
                 <li>Enter your email address (use one you check regularly)</li>
-                <li>Create a password and pick a username (like <code style="background:#f1f5f9; padding:2px 6px; border-radius:4px;">firstname-lastname</code>)</li>
+                <li>Create a password and pick a username</li>
                 <li>Verify your email when GitHub sends you a code</li>
-                <li>Skip the personalization questions</li>
             </ul>
             <div class="info-box">
                 <p>✅ <strong>Already have GitHub?</strong> Skip to Step 2!</p>
@@ -319,78 +349,42 @@
                 <div class="step-number">2</div>
                 <h2>Get Added to TLH</h2>
             </div>
-            <p>Email <a href="mailto:tran@truelegacyhomes.com">tran@truelegacyhomes.com</a> with the email you used to sign up for GitHub. Tran will send you an invite to the <strong>TrueLegacyHomes</strong> organization. Accept the invite when you get it!</p>
+            <p>Email <a href="mailto:tran@truelegacyhomes.com">tran@truelegacyhomes.com</a> with the email you used to sign up for GitHub. Tran will send you an invite to the <strong>TrueLegacyHomes</strong> organization.</p>
         </div>
 
         <div class="step">
             <div class="step-header">
                 <div class="step-number">3</div>
-                <h2>Create a GitHub Token</h2>
+                <h2>Access Skills in Cowork</h2>
             </div>
-            <p style="margin-bottom: 16px;">Go to <a href="https://github.com/settings/tokens/new">github.com/settings/tokens/new</a> and create a token:</p>
-            <ul style="margin-bottom: 20px;">
-                <li>Note (name): <strong>Claude Cowork</strong></li>
-                <li>Expiration: <strong>90 days</strong> (or longer)</li>
-                <li>Scope: Check the box for <strong>repo</strong> (Full control of private repositories)</li>
-                <li>Click <strong>Generate token</strong></li>
-                <li><strong>Copy the token</strong> — you'll need it in the next step!</li>
-            </ul>
+            <p style="margin-bottom: 16px;">In Claude Cowork, you can reference TLH skills by asking Claude to fetch them:</p>
+            <div class="command-box" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+                <code>"Read the skill from https://github.com/TrueLegacyHomes/Skills2.0/blob/main/2.xx-blueprints/2.02-sop-creator/SKILL.md and help me create an SOP"</code>
+            </div>
+            <div class="info-box">
+                <p>💡 Claude Cowork can read files directly from GitHub when you give it the URL.</p>
+            </div>
         </div>
 
         <div class="step">
             <div class="step-header">
                 <div class="step-number">4</div>
-                <h2>Open Claude Cowork</h2>
+                <h2>Bookmark Common Skills</h2>
             </div>
-            <p>Go to <a href="https://cowork.anthropic.com">cowork.anthropic.com</a> and sign in with your TLH account.</p>
-        </div>
-
-        <div class="step">
-            <div class="step-header">
-                <div class="step-number">5</div>
-                <h2>Add Your GitHub Token to Cowork</h2>
-            </div>
-            <p style="margin-bottom: 16px;">In Cowork, go to <strong>Settings</strong> (gear icon) → <strong>Connections</strong> or <strong>Integrations</strong>:</p>
-            <ul style="margin-bottom: 16px;">
-                <li>Find <strong>GitHub</strong> and click <strong>Connect</strong></li>
-                <li>Paste your token from Step 2</li>
-                <li>Click <strong>Save</strong></li>
+            <p>Save these URLs for quick access to the skills you use most:</p>
+            <ul style="margin-top: 12px;">
+                <li><a href="https://github.com/TrueLegacyHomes/Skills2.0/tree/main/1.xx-foundation">Foundation Skills</a></li>
+                <li><a href="https://github.com/TrueLegacyHomes/Skills2.0/tree/main/2.xx-blueprints">Blueprint Skills</a></li>
             </ul>
-            <div class="info-box">
-                <p>💡 If you don't see a GitHub option, type <code>/settings github</code> in the chat and follow the prompts.</p>
-            </div>
-        </div>
-
-        <div class="step">
-            <div class="step-header">
-                <div class="step-number">6</div>
-                <h2>Add the TLH Marketplace</h2>
-            </div>
-            <p style="margin-bottom: 16px;">In the chat, type this command and press Enter:</p>
-            <div class="command-box">
-                <code>/plugin marketplace add TrueLegacyHomes/Skills2.0</code>
-                <button class="copy-btn" onclick="copyCommand()">Copy</button>
-            </div>
-            <div class="info-box">
-                <p>✅ This adds <strong>all 16 TLH skills</strong> to your Cowork at once!</p>
-            </div>
-        </div>
-        
-        <div class="step">
-            <div class="step-header">
-                <div class="step-number">7</div>
-                <h2>Pick a Skill & Start Working</h2>
-            </div>
-            <p>Click the skill picker, select any TLH skill, and start chatting. That's it!</p>
         </div>
 
         <div class="divider"></div>
 
-        <h2 class="skills-title">All 16 Skills Included</h2>
-        <p class="skills-subtitle">You get all of these when you complete the steps above.</p>
+        <h2 class="skills-title">All 16 Skills Available</h2>
+        <p class="skills-subtitle">Reference any of these in Claude Cowork by linking to the GitHub file.</p>
         
         <!-- 1.xx Foundation Skills -->
-        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; margin-bottom: 16px; margin-top: 24px;">1.xx Foundation</h3>
+        <h3 class="section-label">Foundation Skills</h3>
         <div class="skills-grid" style="margin-bottom: 32px;">
             <div class="skill-card">
                 <h3>skill-builder</h3>
@@ -425,13 +419,13 @@
                 <p>Voice and messaging style</p>
             </div>
             <div class="skill-card">
-                <h3>tools-and-platforms-map</h3>
+                <h3>tools-and-platforms</h3>
                 <p>All tools and systems in use</p>
             </div>
         </div>
 
         <!-- 2.xx Blueprint Skills -->
-        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; margin-bottom: 16px;">2.xx Blueprints</h3>
+        <h3 class="section-label">Blueprint Skills</h3>
         <div class="skills-grid">
             <div class="skill-card">
                 <h3>problem-definer</h3>
@@ -474,12 +468,5 @@
         <p>© 2026 True Legacy Homes</p>
     </footer>
 
-    <script>
-        function copyCommand() {
-            navigator.clipboard.writeText('/plugin marketplace add TrueLegacyHomes/Skills2.0');
-            event.target.textContent = 'Copied!';
-            setTimeout(() => event.target.textContent = 'Copy', 2000);
-        }
-    </script>
 </body>
 </html>
