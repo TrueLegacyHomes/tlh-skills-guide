@@ -285,7 +285,7 @@
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
-            3 Simple Steps
+            6 Simple Steps
         </div>
         <h1>TLH Skills for Claude Code</h1>
         <p class="subtitle">Add all 16 True Legacy Homes AI skills as slash commands.</p>
@@ -297,32 +297,78 @@
         <div class="step">
             <div class="step-header">
                 <div class="step-number">1</div>
-                <h2>Open Terminal</h2>
+                <h2>Create a GitHub Account</h2>
             </div>
-            <ul>
-                <li><strong>Mac:</strong> Press <strong>Cmd + Space</strong>, type <strong>Terminal</strong>, press Enter</li>
-                <li><strong>Windows:</strong> Press <strong>Windows key</strong>, type <strong>PowerShell</strong>, press Enter</li>
+            <p style="margin-bottom: 16px;">If you don't have a GitHub account yet, create one first:</p>
+            <ul style="margin-bottom: 20px;">
+                <li>Go to <a href="https://github.com/signup">github.com/signup</a></li>
+                <li>Enter your email address (use one you check regularly)</li>
+                <li>Create a password and pick a username (like <code style="background:#f1f5f9; padding:2px 6px; border-radius:4px;">firstname-lastname</code>)</li>
+                <li>Verify your email when GitHub sends you a code</li>
+                <li>Skip the personalization questions</li>
             </ul>
+            <div class="info-box">
+                <p>✅ <strong>Already have GitHub?</strong> Skip to Step 2!</p>
+            </div>
         </div>
 
         <div class="step">
             <div class="step-header">
                 <div class="step-number">2</div>
-                <h2>Run the Install Command</h2>
+                <h2>Get Added to TLH</h2>
             </div>
-            <p>Copy and paste this command, then press Enter:</p>
-            <div class="command-box">
-                <code>bash <(curl -s https://raw.githubusercontent.com/TrueLegacyHomes/Skills2.0/main/install.sh)</code>
-                <button class="copy-btn" onclick="copyInstall()">Copy</button>
-            </div>
-            <div class="info-box">
-                <p>✅ This installs all <strong>16 TLH skills</strong> as slash commands. Run this same command anytime to update.</p>
-            </div>
+            <p>Email <a href="mailto:tran@truelegacyhomes.com">tran@truelegacyhomes.com</a> with the email you used to sign up for GitHub. Tran will send you an invite to the <strong>TrueLegacyHomes</strong> organization. Accept the invite when you get it!</p>
         </div>
 
         <div class="step">
             <div class="step-header">
                 <div class="step-number">3</div>
+                <h2>Install GitHub CLI</h2>
+            </div>
+            <p style="margin-bottom: 16px;">Download and install the GitHub CLI:</p>
+            <ul>
+                <li><strong>Mac:</strong> Open Terminal and run: <code style="background:#f1f5f9; padding:2px 6px; border-radius:4px;">brew install gh</code></li>
+                <li><strong>Windows:</strong> Download from <a href="https://cli.github.com">cli.github.com</a></li>
+            </ul>
+            <div class="info-box">
+                <p>💡 <strong>Don't have Homebrew?</strong> Get it at <a href="https://brew.sh">brew.sh</a> or download gh directly from <a href="https://cli.github.com">cli.github.com</a></p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-header">
+                <div class="step-number">4</div>
+                <h2>Login & Clone the Skills</h2>
+            </div>
+            <p style="margin-bottom: 8px;">Open Terminal and run these commands:</p>
+            <div class="command-box" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+                <code>gh auth login</code>
+            </div>
+            <p style="margin-left: 56px; margin-top: 12px; margin-bottom: 8px; color: #64748b;">Follow the prompts to login with your browser. Then clone the skills:</p>
+            <div class="command-box">
+                <code>gh repo clone TrueLegacyHomes/Skills2.0 ~/.tlh-skills</code>
+                <button class="copy-btn" onclick="copyClone()">Copy</button>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-header">
+                <div class="step-number">5</div>
+                <h2>Run the Install Script</h2>
+            </div>
+            <p>This creates the slash commands:</p>
+            <div class="command-box">
+                <code>bash ~/.tlh-skills/install.sh</code>
+                <button class="copy-btn" onclick="copyInstall()">Copy</button>
+            </div>
+            <div class="info-box">
+                <p>✅ This installs all <strong>16 TLH skills</strong> as slash commands.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-header">
+                <div class="step-number">6</div>
                 <h2>Use Skills in Claude Code</h2>
             </div>
             <p>Open Claude Code and type any <code style="background:#f1f5f9; padding:2px 6px; border-radius:4px;">/tlh-</code> command:</p>
@@ -334,6 +380,10 @@
             <div class="info-box">
                 <p>💡 Type <code>/tlh-</code> and Claude Code will autocomplete available skills.</p>
             </div>
+        </div>
+        
+        <div class="info-box" style="margin-left: 0; margin-top: 32px; background: #fef3e2; border-color: #fcd34d;">
+            <p style="color: #92400e;"><strong>To update skills later:</strong> <code style="background:#fff; padding:2px 6px; border-radius:4px;">cd ~/.tlh-skills && git pull && ./install.sh</code></p>
         </div>
 
         <div class="divider"></div>
@@ -427,8 +477,14 @@
     </footer>
 
     <script>
+        function copyClone() {
+            navigator.clipboard.writeText('gh repo clone TrueLegacyHomes/Skills2.0 ~/.tlh-skills');
+            event.target.textContent = 'Copied!';
+            setTimeout(() => event.target.textContent = 'Copy', 2000);
+        }
+        
         function copyInstall() {
-            navigator.clipboard.writeText('bash <(curl -s https://raw.githubusercontent.com/TrueLegacyHomes/Skills2.0/main/install.sh)');
+            navigator.clipboard.writeText('bash ~/.tlh-skills/install.sh');
             event.target.textContent = 'Copied!';
             setTimeout(() => event.target.textContent = 'Copy', 2000);
         }
